@@ -13,14 +13,13 @@ def euclides_estendido(a, b):
         return (g, x - (b // a) * y, y)
 
 def modinv(a, m):
-    # Inverso modular usando o algoritmo estendido de Euclides - Versão Corrigida 
+    # Inverso modular usando o algoritmo estendido de Euclides 
     g, x, y = euclides_estendido(a, m)
     if g != 1:
-        return None  # Não existe inverso se a e m não são coprimos
-    return x % m  # Corrigido: removido o return extra que causava o erro
+        return None  
+    return x % m  
 
 def gerar_chaves():
-    # Gerar par de chaves pública e privada RSA - Versão Melhorada 
     # Passo 1: Escolher dois primos (fixos para exemplo)
     p = 61
     q = 53
